@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+@font-face {
+    font-family: "SF Pro";
+    src: url('../fonts/SFProMedium/FontsFree-Net-SFProDisplay-Medium-1.ttf');
+    font-weight: 500;
+}  
+.body {
+  
+  display: grid;
+  place-items: center;
+
+  background: #ffffff;
+  
+}
+.body h2{
+  font-family: "SF Pro", Helvetica, Arial, sans-serif;
+  font-size: 56px;
+  color: #1d1d1f;
+  font-weight: 600;
+  line-height: 1.07143;
+  letter-spacing: -.005em;
+  margin: 56px;
+}

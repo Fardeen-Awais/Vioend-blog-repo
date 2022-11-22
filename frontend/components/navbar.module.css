@@ -1,0 +1,49 @@
+
+@font-face {
+  font-family: "nirequa";
+  src: url('../fonts/nirequa/Nirequa.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+  .logo h2 {
+    color: white;
+    font-family: "nirequa";
+    font-size: 20px;
+    position: absolute;   
+  }
+ .logo
+{
+
+    position: relative;
+    cursor: pointer;
+    right: 80px;
+    bottom: 25px;
+
+}
+.logo p{
+  margin-top: 20px;
+}
+
+  .CategoryIcon:hover .dropdowncontent {
+    display: block;
+  }
+
+ 
+  /* @keyframes changeImg {
+    0%{
+      background-image: url('https://images.hdqwalls.com/download/jin-kazama-tekken-7-5k-98-1920x1080.jpg');
+    }
+    20%{
+      background-image: url('https://cdnb.artstation.com/p/assets/images/images/036/730/963/4k/bell-de-deus-highresscreenshot00004.jpg?1618456749');
+    }
+    70%{
+      background-image: url('https://shop.pcb.com.pk/static/media/LandingPage.eb696526.jpeg');
+    }
+    100%{
+      background-image: url('https://selectedinspiration.com/storage/entries/2021/03/5083220210317012733426/Pikachu-Loves-Money-NFT-Gal-Yosef-1.jpg');
+    }
+    
+  } */
+  
