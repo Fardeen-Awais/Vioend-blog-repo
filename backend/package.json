@@ -6,10 +6,13 @@
   "main": "package.json",
   "author": "Fardeen Awais <fardeenjutt99@gmail.com>",
   "license": "UNLICENSED",
-  "scripts": {
-    "start": "sanity start",
-    "build": "sanity build"
-  },
+
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "./node_modules/.bin/netlify-lambda serve src",
+      "build": "react-scripts build"
+    },
+  
   "keywords": [
     "sanity"
   ],
