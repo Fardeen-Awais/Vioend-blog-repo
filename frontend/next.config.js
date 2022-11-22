@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-<<<<<<< HEAD
+
   images: {
     remotePatterns: [
       {
@@ -11,8 +11,8 @@ const nextConfig = {
       },
     ],
   },
-=======
->>>>>>> 2cdfc3b136f8739df7f3771c37adcc8b1c8ddaaa
+
+
   async rewrites() {
     return [
         {

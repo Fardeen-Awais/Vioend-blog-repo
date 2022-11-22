@@ -21,20 +21,11 @@ const NavBar = () => {
     <>
       <header>
         <div className="m-auto flex flex-wrap flex-col md:flex-row  ">
-<<<<<<< HEAD
             <div className=" cursor-pointer ml-6 w-48">
               <Link href={'/'}><Image
                 src="/logo.png"
                 alt="Picture of the author"
                 width={250}
-=======
-            <div className=" cursor-pointer ">
-              <Link href={'/'}><Image
-              className="relative ml-6"
-                src="/logo.png"
-                alt="Picture of the author"
-                width={280}
->>>>>>> 2cdfc3b136f8739df7f3771c37adcc8b1c8ddaaa
                 height={150}
                 
               /></Link>
@@ -42,11 +33,7 @@ const NavBar = () => {
           
           <div
             onClick={toggleCart}
-<<<<<<< HEAD
             className="cursor-pointer cart absolute right-0 top-10 mr-10 "
-=======
-            className="cursor-pointer cart absolute right-0 top-11 mr-10 "
->>>>>>> 2cdfc3b136f8739df7f3771c37adcc8b1c8ddaaa
           >
             <MenuIcon fontSize="large" />
           </div>
