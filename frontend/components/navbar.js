@@ -25,8 +25,8 @@ const NavBar = () => {
               <Link href={'/'}><Image
                 src="/logo.png"
                 alt="Picture of the author"
-                width={250}
-                height={150}
+                width={384}
+                height={230}
                 
               /></Link>
             </div>

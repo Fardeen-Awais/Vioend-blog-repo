@@ -39,15 +39,15 @@ export default function Home({ posts }) {
           <span>
             Its easy and free to read blogs and join esports tournament{" "}
           </span>
-        </div>
-
+        </div >
+<div className="w-32">
         <Image
-          className="hidden md:inline-flex h-32 lg:h-28"
+          className="hidden md:inline-flex  lg:h-28 "
           src="/join.png"
           alt="join"
-          width={150}
-          height={120}
-          />
+          width={512}
+          height={512}
+          /></div>
       </div>
 
       <h2 className="text-[#000] text-5xl pt-4 text-center font-serif">
