@@ -1,4 +1,5 @@
 import { createClient } from "next-sanity";
+
 import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
@@ -10,8 +11,8 @@ export default function Home({ posts }) {
     useCdn: false,
   });
   const builder = imageUrlBuilder(client);
-  config({ ssrFadeout: true });
-  console.log(process.env.GREETING);
+ 
+ 
   return (
     <div>
       <Head>
