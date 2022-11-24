@@ -1,4 +1,3 @@
-import config from "react-reveal/globals";
 import { createClient } from "next-sanity";
 import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
