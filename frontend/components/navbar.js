@@ -27,10 +27,8 @@ const NavBar = () => {
                 alt="Picture of the author"
                 width={384}
                 height={230}
-                
               /></Link>
             </div>
-          
           <div
             onClick={toggleCart}
             className="cursor-pointer cart absolute right-0 top-10 mr-10 "
@@ -43,7 +41,7 @@ const NavBar = () => {
           >
             <span
               onClick={toggleCart}
-              className="absolute top-2 right-8 cursor-pointer  "
+              className="absolute top-2 right-8 cursor-pointer"
             >
               <CloseIcon fontSize="large" className="text-white" />
             </span>

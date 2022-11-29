@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 import Link from "next/link";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url"
@@ -25,12 +25,14 @@ function Blogs({ posts }) {
           
                 <Link href={"/blogs/" + arg.slug.current} key={arg.slug}>
                   <div className="group cursor-pointer shadow-md overflow-hidden">
-                    <img
-                      src={builder.image(arg.mainImage).width(700).url()}
-                      alt="gaming"
-                      className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'
-                      
-                    />
+                    
+                    <Image
+                  src={builder.image(arg.mainImage).url()}
+                  alt="gaming"
+                  width={417}
+                  height={250}  
+                  className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                />
                   
                   <div className="flex justify-center
                   p-5 bg-white">
