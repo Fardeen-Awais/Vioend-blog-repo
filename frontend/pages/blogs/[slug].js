@@ -44,7 +44,7 @@ const Post = ({ blog }) => {
         <meta name="author" content={blog.author.name} />
       </Head>
       <article className="max-w-3xl mx-10 font-roboto m-[90px] mt-6  text-xl ">
-            <h1 className="sm:text-5xl  font-semibold text-4xl mb-4 text-gray-900 ">
+            <h1 className="sm:text-4xl  font-serif font-semibold text-3xl mb-4 ">
               {blog.title}
             </h1>
             <div>
@@ -54,7 +54,7 @@ const Post = ({ blog }) => {
                 dataset="production"
                 serializers={{
                   h2: (props) => <h2 className="sm:text-4xl text-3xl font-bold my-8 " {...props} />,
-                  h3: (props) => <h3 className="sm:text-4xl text-3xl font-bold my-8 " {...props} />,
+                  h3: (props) => <h3 className="sm:text-3xl text-2xl font-bold my-8 " {...props} />,
                   highlight: (props) => <highlight className="bg-[#ffff86]" {...props} />,
                   code: (props) => <code className="bg-yellow-100 my-8 " {...props} />,
                   link: ({ children }) => (
