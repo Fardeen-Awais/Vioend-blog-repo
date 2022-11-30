@@ -22,15 +22,7 @@ export default function Home({ posts }) {
           content="Vioend is a place where you can read gaming blogs and join esports tournament. Get the latest News on gaming and sports and products such as tshirts and toys."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* <!-- Google tag (gtag.js) --> */}
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2QWZS5QGK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)}
-  gtag('js', new Date());
 
-  gtag('config', 'G-Y2QWZS5QGK');
-</script>
       </Head>
       <div className="flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 bg-no-repeat bg-cover border-y border-black py-5 lg:py-10 my-10 mx-3 sm:mx-32">
         <div className="px-10 space-y-5">
