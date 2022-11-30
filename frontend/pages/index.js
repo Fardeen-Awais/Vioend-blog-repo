@@ -22,10 +22,15 @@ export default function Home({ posts }) {
           content="Vioend is a place where you can read gaming blogs and join esports tournament. Get the latest News on gaming and sports and products such as tshirts and toys."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"/>
+        {/* <!-- Google tag (gtag.js) --> */}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2QWZS5QGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y2QWZS5QGK');
+</script>
       </Head>
       <div className="flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 bg-no-repeat bg-cover border-y border-black py-5 lg:py-10 my-10 mx-3 sm:mx-32">
         <div className="px-10 space-y-5">
@@ -54,7 +59,7 @@ export default function Home({ posts }) {
         Recent Blogs
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 mb-20">
         {posts.map((arg) => {
           return (
             <Link href={"/blogs/" + arg.slug.current} key={arg.slug}>
@@ -72,7 +77,7 @@ export default function Home({ posts }) {
                   p-5 bg-white"
                 >
                   <div>
-                    <p className="text-2xl leading-6 tracking-tighter font-medium font-roboto hover:text-blue-900">{arg.title}</p>
+                    <p className="text-2xl leading-7  font-normal font-serif hover:text-pink-800">{arg.title}</p>
                     <p className="text-sm py-2 font-roboto">{arg.metadesc} </p>
                   </div>
                 </div>
