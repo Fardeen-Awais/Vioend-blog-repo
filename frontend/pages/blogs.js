@@ -16,7 +16,7 @@ function Blogs({ posts }) {
        <div className='bg-white'>
    
      
-          <h2 className="text-[#000] text-5xl pt-4 text-center font-serif"> Blog Section</h2>
+          <h2 className="text-[#000] text-5xl py-4 text-center font-serif"> Blog Section</h2>
 
 
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 '>
@@ -26,19 +26,19 @@ function Blogs({ posts }) {
                 <Link href={"/blogs/" + arg.slug.current} key={arg.slug}>
                   <div className="group cursor-pointer shadow-md overflow-hidden">
                     
-                    <Image
+                  <Image
                   src={builder.image(arg.mainImage).url()}
                   alt="gaming"
-                  width={417}
-                  height={250}  
-                  className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                  width={700}
+                  height={400}  
+                  className="h-60 w-full object-cover transition-transform duration-200 ease-in-out center group-hover:scale-105"
                 />
                   
                   <div className="flex justify-center
                   p-5 bg-white">
                     <div>
-                    <p className="text-2xl">{arg.title}</p>
-                    <p>{arg.metadesc} </p>
+                    <p className="text-2xl leading-8 tracking-tight hover:text-blue-90">{arg.title}</p>
+                    <p className="text-sm py-2 tracking-wider">{arg.metadesc} </p>
                   </div>
                   </div>
                   </div>

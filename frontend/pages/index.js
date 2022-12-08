@@ -26,7 +26,7 @@ export default function Home({ posts }) {
       </Head>
       <div className="flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 bg-no-repeat bg-cover border-y border-black py-5 lg:py-10 my-10 mx-3 sm:mx-32">
         <div className="px-10 space-y-5">
-          <div className="text-xl sm:text-4xl  max-w-2xl font-merri">
+          <div className="text-xl sm:text-4xl  max-w-2xl ">
             <p>
               Vioend is a place where you can read Gaming Blogs and join gaming
               tournament.
@@ -34,24 +34,24 @@ export default function Home({ posts }) {
           </div>
 
           <span>
-            Its easy and free to read blogs and join esports tournament{" "}
+            Its easy and free to read blogs and join esports tournament
           </span>
         </div >
-<div className="w-32">
+
         <Image
-          className="hidden md:inline-flex  lg:h-28 "
+          className="hidden md:inline-flex lg:h-28 "
           src="/join.png"
           alt="join"
           width={512}
           height={512}
           /></div>
-      </div>
-
+      
       <h2 className="text-[#000] text-5xl pt-4 text-center font-serif">
         Recent Blogs
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 mb-20">
+      <div className="
+      grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 m-7 md:p-6 ">
         {posts.map((arg) => {
           return (
             <Link href={"/blogs/" + arg.slug.current} key={arg.slug}>
@@ -59,9 +59,9 @@ export default function Home({ posts }) {
                 <Image
                   src={builder.image(arg.mainImage).url()}
                   alt="gaming"
-                  width={417}
-                  height={250}  
-                  className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                  width={700}
+                  height={400}  
+                  className="h-60 w-full object-cover transition-transform duration-200 ease-in-out center group-hover:scale-105"
                 />
 
                 <div
@@ -69,8 +69,8 @@ export default function Home({ posts }) {
                   p-5 bg-white"
                 >
                   <div>
-                    <p className="text-2xl leading-7  font-normal font-serif hover:text-pink-800">{arg.title}</p>
-                    <p className="text-sm py-2 font-roboto">{arg.metadesc} </p>
+                    <p className="text-2xl leading-7 tracking-tight font-medium  hover:text-blue-900">{arg.title}</p>
+                    <p className="text-sm py-2 tracking-wider">{arg.metadesc} </p>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export async function getServerSideProps(context) {
     dataset: "production",
     useCdn: false,
   });
-  const posts = await client.fetch(`*[_type == "post"][0..3]{
+  const posts = await client.fetch(`*[_type == "post"][0..2]{
     _id,
     title,
     author ->{

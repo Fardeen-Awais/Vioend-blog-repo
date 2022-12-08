@@ -98,7 +98,7 @@ const Post = ({ blog }) => {
               name="_id"
               value={blog._id}
             />
-            <label className="block mb-5">
+            <label className="block mb-5 px-4">
               <span className="px-2 text-gray-700">Name</span>
               <input
                 {...register("name", { required: true })}
@@ -107,7 +107,7 @@ const Post = ({ blog }) => {
                 placeholder="Joe Root"
               />
             </label>
-            <label className="block mb-5">
+            <label className="block mb-5 px-4">
               <span className="px-2 text-gray-700">Email</span>
               <input
                 {...register("email", { required: true })}
@@ -116,7 +116,7 @@ const Post = ({ blog }) => {
                 placeholder="@youremail.com"
               />
             </label>
-            <label className="block mb-5">
+            <label className="block mb-5 px-4">
               <span className="px-2 text-gray-700">Comment</span>
               <textarea
                 {...register("comment", { required: true })}
