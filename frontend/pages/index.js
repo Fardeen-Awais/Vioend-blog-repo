@@ -40,13 +40,13 @@ export default function Home({ posts }) {
       <Cursor cursorColor='white' />
       </p>
       
-      <div className="Downward absolute bottom-0 right-[40%] md:hidden">
-      <p className="bottom-0">Swipe Down </p>
-      <ExpandMoreIcon fontSize="large"  />
+      <div className="Downward absolute bottom-0 right-[40%] md:hidden cursor-pointer">
+      <p className="bottom-0 ">Swipe Down </p>
+      <Link href={'#blog'}><ExpandMoreIcon fontSize="large"  /></Link>
       </div>
     </div>
      
-     <div className="blog snap-center">
+     <div id="blog" className="blog snap-center">
       <h2 className="text-[#000] text-5xl text-center font-serif my-16">
         Recent Blogs
       </h2>
