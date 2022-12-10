@@ -40,7 +40,7 @@ export default function Home({ posts }) {
       <Cursor cursorColor='white' />
       </p>
       
-      <div className="Downward absolute bottom-0 right-[40%] ">
+      <div className="Downward absolute bottom-0 right-[40%] md:hidden">
       <p className="bottom-0">Swipe Down </p>
       <ExpandMoreIcon fontSize="large"  />
       </div>
