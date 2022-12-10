@@ -34,7 +34,7 @@ const NavBar = () => {
           </div>
           <div
             ref={ref}
-            className="sidebar md:w-[400px] sm:w-[400px] w-[400px]  h-full  absolute top-0 right-0 bg-gradient-to-r from-stone-900 via-slate-900 to-neutral-900  px-2 py-10 transform transition-transform duration-600 ease-in-out hidden z-10" // Initially set hidden
+            className="sidebar md:w-[400px] sm:w-[400px] w-[400px]  h-full  absolute top-0 right-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900  px-2 py-10 transform transition-transform duration-600 ease-in-out hidden z-10" // Initially set hidden
           >
             <span
               onClick={toggleCart}
