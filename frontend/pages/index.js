@@ -1,7 +1,8 @@
 import { createClient } from "next-sanity";
-
 import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import Head from "next/head";
 import Image from "next/image";
 export default function Home({ posts }) {
@@ -12,9 +13,15 @@ export default function Home({ posts }) {
   });
   const builder = imageUrlBuilder(client);
  
- 
+  const [text] = useTypewriter({
+    words: ['Get Gaming News and updates ', 'Buy Gaming Products','Join Esports Tournament'],
+    delaySpeed: 2000,
+
+    loop: Infinity,
+   
+  })
   return (
-    <div>
+    <div className="">
       <Head>
         <title>VioEnd - Sports, Gaming and Tournament </title>
         <meta
@@ -24,29 +31,23 @@ export default function Home({ posts }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       </Head>
-      <div className="flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 bg-no-repeat bg-cover border-y border-black py-5 lg:py-10 my-10 mx-3 sm:mx-32">
-        <div className="px-10 space-y-5">
-          <div className="text-xl sm:text-4xl  max-w-2xl ">
-            <p>
-              Vioend is a place where you can read Gaming Blogs and join gaming
-              tournament.
-            </p>
-          </div>
 
-          <span>
-            Its easy and free to read blogs and join esports tournament
-          </span>
-        </div >
-
-        <Image
-          className="hidden md:inline-flex lg:h-28 "
-          src="/join.png"
-          alt="join"
-          width={512}
-          height={512}
-          /></div>
+      <div className="flex flex-col justify-center text-center item-center h-[100vh] snap-center bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 ">
+          <h2 className="text-4xl md:text-6xl font-semibold font-serif b">Welcome to Vioend</h2>
+    <p className='text-2xl md:text-3xl font-serif my-16'>
+    
+        <span>{text}</span>
+      <Cursor cursorColor='white' />
+      </p>
       
-      <h2 className="text-[#000] text-5xl pt-4 text-center font-serif">
+      <div className="Downward absolute bottom-0 right-[40%] ">
+      <p className="bottom-0">Swipe Down </p>
+      <ExpandMoreIcon fontSize="large"  />
+      </div>
+    </div>
+     
+     <div className="blog snap-center">
+      <h2 className="text-[#000] text-5xl text-center font-serif my-16">
         Recent Blogs
       </h2>
 
@@ -55,7 +56,7 @@ export default function Home({ posts }) {
         {posts.map((arg) => {
           return (
             <Link href={"/blogs/" + arg.slug.current} key={arg.slug}>
-              <div className="group cursor-pointer shadow-md overflow-hidden">
+              <div className="group cursor-pointer shadow-md overflow-hidden my-2">
                 <Image
                   src={builder.image(arg.mainImage).url()}
                   alt="gaming"
@@ -78,6 +79,7 @@ export default function Home({ posts }) {
           );
         })}
       </div>
+      </div> 
     </div>
   );
 }
