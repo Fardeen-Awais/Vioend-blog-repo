@@ -6,6 +6,12 @@ const highlightIcon = () => (
 const highlightRender = props => (
     <span style={{ backgroundColor: 'yellow' }}>{props.children}</span>
   )
+const summeryIcon = () => (
+  <span style={{fontWeight: 'bold'}}>S</span>
+  )
+const summeryRender = props => (
+    <span style={{ backgroundColor: 'green' }}>{props.children}</span>
+  )
 export default {
   name: "post",
   title: "post",
@@ -83,6 +89,14 @@ export default {
                 blockEditor: {
                   icon: highlightIcon,
                   render: highlightRender
+                }
+              },
+              {
+                title: "Summery",
+                value: "summery",
+                blockEditor: {
+                  icon: summeryIcon,
+                  render: summeryRender
                 }
               }
             ]

@@ -43,27 +43,42 @@ const Post = ({ blog }) => {
         <meta name="description" content={blog.metadesc} />
         <meta name="author" content={blog.author.name} />
       </Head>
-      <article className="max-w-3xl mx-10 font-roboto m-[90px] mt-6  text-xl ">
-            <h1 className="sm:text-4xl  font-serif font-semibold text-3xl mb-4 ">
+      <div className=" mx-auto py-10 max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl  font-roboto m-[90px] mt-6 ">
+        <h1 className="sm:text-4xl font-semibold text-3xl mb-4 ">
               {blog.title}
             </h1>
-            <div>
+      <article>
+            
+            
               <PortableText
                 content={blog.body}
                 projectId="gs7n2rfb"
                 dataset="production"
                 serializers={{
-                  h2: (props) => <h2 className="sm:text-4xl text-3xl font-bold my-8 " {...props} />,
-                  h3: (props) => <h3 className="sm:text-3xl text-2xl font-bold my-8 " {...props} />,
+                  h2: (props) => <h2 className="sm:text-4xl text-3xl font-bold  " {...props} />,
+                  h3: (props) => <h3 className="sm:text-3xl text-2xl font-bold  " {...props} />,
                   highlight: (props) => <highlight className="bg-[#ffff86]" {...props} />,
-                  code: (props) => <code className="bg-yellow-100 my-8 " {...props} />,
-                  link: ({ children }) => (
-                    <a className="text-[#02838d] hover:text-pink-600 cursor-pointer">{children}</a>
+                  summery: ({children}) =>( 
+                    <summery className="w-96 sm:w-full mx-auto flex items-start my-4 p-10 bg-yellow-100 text-lg">
+                     
+                      {children}
+                    </summery>
                   ),
+                  code: (props) => <code className="bg-yellow-100 my-8 " {...props} />,
+                  ul: (props) => <ul className="list-disc m-5 text-lg marker:text-cyan-600 list-outside" {...props} />,
+                  code: (props) => <code className="bg-yellow-100 my-8 " {...props} />,
+                  ol: (props) => <ul className="list-decimal m-5 text-lg" {...props} />,
+                  normal: ({children}) => <p className="text-xl ">{children}<br/></p>  ,
+                  link: ({ children }) => (
+                    <a href={children} className=" text-cyan-600 hover:text-pink-600 py-3 cursor-pointer underline ">{children} </a>
+                  ),
+
+                  
                 }}
               />
-            </div>
+           
             </article>
+            </div>
           {/* Commments */}
           <div className="flex flex-col p-10 my-10 ">
             <hr className="py-3 mt-2" />

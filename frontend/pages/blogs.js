@@ -57,7 +57,7 @@ export async function getServerSideProps(context) {
     dataset: "production",
     useCdn: false,
   });
-  const posts = await client.fetch(`*[_type == "post"][0..3]{
+  const posts = await client.fetch(`*[_type == "post"]{
     _id,
     title,
     author ->{
