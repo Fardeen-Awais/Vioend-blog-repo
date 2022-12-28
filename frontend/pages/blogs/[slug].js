@@ -43,7 +43,7 @@ const Post = ({ blog }) => {
         <meta name="description" content={blog.metadesc} />
         <meta name="author" content={blog.author.name} />
       </Head>
-      <div className=" mx-auto py-10 max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl  font-roboto m-[90px] mt-6 ">
+      <div className=" mx-auto p-10 max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-5xl  font-roboto m-[90px] mt-6 ">
         <h1 className="sm:text-4xl font-semibold text-3xl mb-4 ">
               {blog.title}
             </h1>
@@ -54,12 +54,13 @@ const Post = ({ blog }) => {
                 content={blog.body}
                 projectId="gs7n2rfb"
                 dataset="production"
+
                 serializers={{
                   h2: (props) => <h2 className="sm:text-4xl text-3xl font-bold  " {...props} />,
                   h3: (props) => <h3 className="sm:text-3xl text-2xl font-bold  " {...props} />,
                   highlight: (props) => <highlight className="bg-[#ffff86]" {...props} />,
                   summery: ({children}) =>( 
-                    <summery className="w-96 sm:w-full mx-auto flex items-start my-4 p-10 bg-yellow-100 text-lg">
+                    <summery className="w-fit sm:w-full mx-auto flex items-start my-4 p-10 bg-yellow-100 text-lg">
                      
                       {children}
                     </summery>
@@ -72,7 +73,7 @@ const Post = ({ blog }) => {
                   link: ({ children }) => (
                     <a href={children} className=" text-cyan-600 hover:text-pink-600 py-3 cursor-pointer underline ">{children} </a>
                   ),
-
+                  
                   
                 }}
               />
