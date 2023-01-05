@@ -23,7 +23,7 @@ export default function Home({ posts }) {
   return (
     <div className="">
       <Head>
-        <title>VioEnd - Sports, Gaming and Tournament </title>
+        <title>Vioend - Sports, Gaming and Tournament </title>
         <meta
           name="description"
           content="Vioend is a place where you can read gaming blogs and join esports tournament. Get the latest News on gaming and sports and products such as tshirts and toys."

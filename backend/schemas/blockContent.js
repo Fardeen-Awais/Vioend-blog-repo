@@ -1,3 +1,5 @@
+import {defineType, defineArrayMember} from 'sanity'
+
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -8,12 +10,12 @@
  *    type: 'blockContent'
  *  }
  */
-export default {
+export default defineType({
   title: 'Block Content',
   name: 'blockContent',
   type: 'array',
   of: [
-    {
+    defineArrayMember({
       title: 'Block',
       type: 'block',
       // Styles let you set what your user can mark up blocks with. These
@@ -40,31 +42,26 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
+            title: 'URL',
             name: 'link',
             type: 'object',
-            title: 'External link',
             fields: [
               {
+                title: 'URL',
                 name: 'href',
                 type: 'url',
-                title: 'URL'
               },
-              {
-                title: 'Open in new tab',
-                name: 'blank',
-                description: 'Read https://css-tricks.com/use-target_blank/',
-                type: 'boolean'
-              }
-            ]
-          }]
+            ],
+          },
+        ],
       },
-    },
+    }),
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
-    {
+    defineArrayMember({
       type: 'image',
       options: {hotspot: true},
-    },
+    }),
   ],
-}
+})

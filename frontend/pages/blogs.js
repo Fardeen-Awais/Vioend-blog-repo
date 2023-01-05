@@ -38,8 +38,8 @@ function Blogs({ posts }) {
                   p-5 bg-white"
                 >
                   <div>
-                    <p className="text-2xl leading-7 tracking-tight font-medium  hover:text-blue-900">{arg.title}</p>
-                    <p className="text-sm py-2 tracking-wider">{arg.metadesc} </p>
+                    <p className="text-xl sm:text-2xl leading-7 tracking-tight font-medium  hover:text-blue-900">{arg.title}</p>
+                    <p className="text-xs sm:text-sm py-2 tracking-wider">{arg.metadesc} </p>
                   </div>
                 </div>
               </div>
