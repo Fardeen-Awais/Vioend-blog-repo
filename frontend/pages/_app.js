@@ -10,9 +10,11 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+    
      <NavBar/>
      <Component {...pageProps} />
      <Footer/>
+    
     </>
   )
 }
